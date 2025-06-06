@@ -1,12 +1,19 @@
-# React + Vite
+# remwaste test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Step 1: clone from github git@github.com:YellowFlash2012/remwaste-test.git
+Step 2: open the terminal and run "npm i"
+Step 3: run npm run dev and click on the provided link
 
-Currently, two official plugins are available:
+## Tech stack explained
+This is a react app created with vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dependencies:
+- redux toolkit query for fetching and caching data
+- react-boostrap for UI design
 
-## Expanding the ESLint configuration
+## General walk through
+I created 3 components in order to make the code as reusable as possible.
+- ProgressBar: to display the progress bar seen at the top
+- SelectSkip: which is the main page that houses both the progress bar and the skips.
+- SkipCard: to abstract the individual skip and their functionalities
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
