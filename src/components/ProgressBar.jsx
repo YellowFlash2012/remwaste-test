@@ -1,69 +1,80 @@
-import {Nav} from "react-bootstrap"
-import { LinkContainer } from "react-router-bootstrap"
+import { Nav } from "react-bootstrap";
+// import { LinkContainer } from "react-router-bootstrap"
 
 import { IoLocationOutline } from "react-icons/io5";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FiTruck } from "react-icons/fi";
-import { MdOutlineShield } from "react-icons/md";
+import { IoShieldOutline } from "react-icons/io5";
 import { MdOutlineDateRange } from "react-icons/md";
 import { MdPayment } from "react-icons/md";
 
-const ProgressBar = ({ step1, step2, step3,step4,step5,step6}) => {
+const ProgressBar = ({ step1, step2, step3, step4, step5, step6 }) => {
     return (
-        <Nav className="justify-content-center mb-4">
+        <Nav className="d-flex flex-row justify-content-between mb-4">
             <Nav.Item>
                 {step1 ? (
-                    <LinkContainer to="/postcode">
-                        <IoLocationOutline/>
-                        <Nav.Link>PostCode</Nav.Link>
-                    </LinkContainer>
+                    <span className="d-flex">
+                        <IoLocationOutline size={25} /> <Nav.Link>PostCode</Nav.Link>
+                    </span>
                 ) : (
                     <Nav.Link disabled>PostCode</Nav.Link>
                 )}
-
+            </Nav.Item>
+            <Nav.Item>
                 {step2 ? (
-                    <LinkContainer to="/waste-type">
-                        <RiDeleteBin6Line/>
-                        <Nav.Link>Waste Type</Nav.Link>
-                    </LinkContainer>
+                    <span className="d-flex">
+                        <RiDeleteBin6Line /> <Nav.Link>Waste Type</Nav.Link>
+                    </span>
                 ) : (
                     <Nav.Link disabled>Waste Type</Nav.Link>
                 )}
+            </Nav.Item>
 
+            <Nav.Item>
                 {step3 ? (
-                    <LinkContainer to="/select-skip">
-                        <FiTruck/>
-                        <Nav.Link>Select Skip</Nav.Link>
-                    </LinkContainer>
+                    <span className="d-flex">
+                        <FiTruck /> <Nav.Link>Select Skip</Nav.Link>
+                    </span>
                 ) : (
                     <Nav.Link disabled>Select Skip</Nav.Link>
                 )}
+            </Nav.Item>
 
+            <Nav.Item>
                 {step4 ? (
-                    <LinkContainer to="/permit-check">
-                        <MdOutlineShield/>
-                        <Nav.Link>Permit Check</Nav.Link>
-                    </LinkContainer>
+                    <>
+                        <IoShieldOutline /> <Nav.Link>Permit Check</Nav.Link>
+                    </>
                 ) : (
-                    <Nav.Link disabled>Permit Check</Nav.Link>
+                    <span className="d-flex">
+                        <IoShieldOutline />{" "}
+                        <Nav.Link disabled>Permit Check</Nav.Link>
+                    </span>
                 )}
+            </Nav.Item>
 
+            <Nav.Item>
                 {step5 ? (
-                    <LinkContainer to="/choose-date">
-                        <MdOutlineDateRange/>
-                        <Nav.Link>Choose Date</Nav.Link>
-                    </LinkContainer>
+                    <>
+                        <MdOutlineDateRange /> <Nav.Link>Choose Date</Nav.Link>
+                    </>
                 ) : (
-                    <Nav.Link disabled>Choose Date</Nav.Link>
+                    <span className="d-flex">
+                        <MdOutlineDateRange />{" "}
+                        <Nav.Link disabled>Choose Date</Nav.Link>
+                    </span>
                 )}
-                
+            </Nav.Item>
+
+            <Nav.Item>
                 {step6 ? (
-                    <LinkContainer to="/payment">
-                        <MdPayment/>
-                        <Nav.Link>Payment</Nav.Link>
-                    </LinkContainer>
+                    <>
+                        <MdPayment /> <Nav.Link>Payment</Nav.Link>
+                    </>
                 ) : (
-                    <Nav.Link disabled>Payment</Nav.Link>
+                    <span className="d-flex">
+                        <MdPayment /> <Nav.Link disabled>Payment</Nav.Link>
+                    </span>
                 )}
             </Nav.Item>
         </Nav>
