@@ -8,6 +8,7 @@ import SkipCard from "../components/SkipCard";
 const SelectSkip = () => {
     const { data, isLoading, error } = useGetAllSkipsQuery();
 
+    console.log(data);
     console.log(error);
 
     return (
@@ -28,7 +29,7 @@ const SelectSkip = () => {
 
                     <Row>
                         {data?.map((skip) => (
-                            <Col key={data?.id} sm={12} md={6} lg={4} xl={3}>
+                            <Col key={skip?.id} sm={12} md={6} lg={4} xl={3}>
                                 <SkipCard skip={skip} />
                             </Col>
                         ))}

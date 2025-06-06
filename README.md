@@ -5,6 +5,7 @@ Step 2: open the terminal and run "npm i"
 Step 3: run npm run dev and click on the provided link
 
 Live: https://rewaste-test.netlify.app/
+https://remwaste-test.vercel.app/
 
 ## Tech stack explained
 This is a react app created with vite.

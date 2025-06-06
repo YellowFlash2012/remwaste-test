@@ -7,13 +7,13 @@ export default defineConfig({
     server: {
         cors: {
             // the origin you will be accessing via browser
-            origin: "https://clicks.aweber.com/y/ct/?l=eNKMKn&m=8kKiA5Xs4lyuOBlr&b=LN4zdPOCY2wffjE5vH.B0w",
+            origin: "https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft",
         },
-        proxy: {
-            "/api": {
-                target: "https://clicks.aweber.com/y/ct/?l=eNKMKn&m=8kKiA5Xs4lyuOBlr&b=LN4zdPOCY2wffjE5vH.B0w",
-                changeOrigin: true,
-            },
-        },
+        // proxy: {
+        //     "/api": {
+        //         target: "https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft",
+        //         changeOrigin: true,
+        //     },
+        // },
     },
 });
