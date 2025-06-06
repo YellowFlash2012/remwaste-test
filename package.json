@@ -3,14 +3,13 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "http://YellowFlash2012.github.io/remwaste-test",
+    
     "scripts": {
         "dev": "vite --port 3000",
         "build": "vite build",
         "lint": "eslint .",
-        "preview": "vite preview",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "preview": "vite preview"
+        
     },
     "dependencies": {
         "@reduxjs/toolkit": "^2.8.2",

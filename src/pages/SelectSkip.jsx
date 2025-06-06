@@ -8,7 +8,7 @@ import SkipCard from "../components/SkipCard";
 const SelectSkip = () => {
     const { data, isLoading, error } = useGetAllSkipsQuery();
 
-    console.log(data);
+    console.log(error);
 
     return (
         <>
@@ -17,7 +17,7 @@ const SelectSkip = () => {
             {isLoading ? (
                 <Loader />
             ) : error ? (
-                <Message variant="danger">{error}</Message>
+                <Message variant="danger">{error?.error}</Message>
             ) : (
                 <>
                     <h2 className="text-center mb-4">Choose Your Skip Size</h2>

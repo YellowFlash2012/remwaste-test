@@ -4,6 +4,8 @@ Step 1: clone from github git@github.com:YellowFlash2012/remwaste-test.git
 Step 2: open the terminal and run "npm i"
 Step 3: run npm run dev and click on the provided link
 
+Live: https://rewaste-test.netlify.app/
+
 ## Tech stack explained
 This is a react app created with vite.
 
